@@ -14,6 +14,9 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            //TODO Buraya if(!TryGetComponent) return; diyerek hata almanın önüne geçebilirsin
+            //TODO Bulamıyorsa işlem yapmasın, yukarıdaki rayi de buradaki if'in içine eklersen && ile
+            //TODO Kodunu yarıya indirmiş olursun
             hit.collider.gameObject.TryGetComponent<CubeScript>(out CubeScript cube);
             cube.Click();
         }
